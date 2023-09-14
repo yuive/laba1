@@ -1,12 +1,12 @@
 def main_menu():
     while True:
         print("Главное меню:")
-        print("1. Задание 1")
-        print("2. Задание 2")
+        print("1. Вывести на экран 51 простое число")
+        print("2. Наиболее частый символ в строке")
         print("3. Задание 3")
-        print("4. Задание 4")
+        print("4. Три самых маленьких значений в словаре")
         print("5. Задание 5")
-        print("6. Задание 6")
+        print("6. Сумма четных чисел кортежа")
         print("7. Выйти")
 
         choice = input("Выберите пункт меню: ")
@@ -35,17 +35,18 @@ def main_menu():
             print(f"Строка в обратном порядке {rever_stroka}")
             pass
         elif choice == '3':
-            result=1
+
             my_list = [13, 56, 'Python', 34, 19, 'love']
             num_list=[x for x in my_list if isinstance(x, int)]
             for i in num_list:
                 if i%2==0:
                     num=i
+                    result=1
                     while num > 0:
                         digit = num % 10
                         result *= digit
                         num //= 10
-                        print(result)
+                    print(result)
                 else:
                     index = num_list.index(i)
                     num_list[index] = 1
